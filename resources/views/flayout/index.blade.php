@@ -7,7 +7,6 @@
     @yield('title')
     <base href="{{asset('')}}">
     <link rel="shortcut icon" href="favicon.ico" type="image/vnd.microsoft.icon" />
-    <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/jquery.eeyellow.Timeline.css">
     <link rel="stylesheet" href="css/owl.carousel.css">
     <link rel="stylesheet" href="css/owl.theme.css">
@@ -75,8 +74,8 @@
       </div>
     </footer>
 
-    <script src="bower_components/jquery/dist/jquery.js"></script>
-    <script src="bower_components/bootstrap-sass/assets/javascripts/bootstrap.js"></script>
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
     <script src="js/owl.carousel.js"></script>
     <script src="js/jquery.eeyellow.Timeline.js"></script>
 

@@ -15,13 +15,13 @@
     <?php $i=0 ?>
     @foreach ($dichvu as $dv)
 
-
+      <li data-target="#carousel-example-generic" data-slide-to="{{ $i }}"
       @if ($i == 0)
-        <li data-target="#carousel-example-generic" data-slide-to="{{ $i }}" class="active"></li>
+        class="active"
       @else
-        <li data-target="#carousel-example-generic" data-slide-to="{{ $i }}" class=""></li>
+        class=""
       @endif
-
+        ></li>
       <?php $i++ ?>
     @endforeach
   </ol>
@@ -29,14 +29,14 @@
   <!-- Wrapper for slides -->
   <div class="carousel-inner">
     @foreach ($dichvu as $dv)
-      @if ($dv->id ==  1)
+      @if ($dv->id == 1)
         <div class="item active">
       @else
         <div class="item">
       @endif
         <img src="/img/{{$dv->hinh}}.jpg" alt="">
         <div class="carousel-caption">
-          <h3><{{$dv->ten}}</h3>
+          <h3>{{$dv->ten}}</h3>
           <div class="hidden-sm hidden-xs">
             <p>{{$dv->diengiai}}</h3>
           </div>
@@ -54,6 +54,7 @@
   </a>
   </div>
 </div>
+
 
 <div class="lienket_area" id="lienket">
   <div class="container">

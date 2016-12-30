@@ -1,46 +1,58 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="icon" href="../../assets/ico/favicon.ico">
-    <title>Dang Quoc Dung</title>
-    <link rel="stylesheet" href="/css/app.css">
-  </head>
-  <body>
+<?php
 
-    <div class="navbar navbar-default" role="navigation">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="#">Dang Quoc Dung</a>
-        </div>
-        <div class="collapse navbar-collapse">
-          <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </div><!--/.nav-collapse -->
-      </div>
-    </div>
+/**
+ * Laravel - A PHP Framework For Web Artisans
+ *
+ * @package  Laravel
+ * @author   Taylor Otwell <taylor@laravel.com>
+ */
 
-    <div class="container">
+/*
+|--------------------------------------------------------------------------
+| Register The Auto Loader
+|--------------------------------------------------------------------------
+|
+| Composer provides a convenient, automatically generated class loader for
+| our application. We just need to utilize it! We'll simply require it
+| into the script here so that we don't have to worry about manual
+| loading any of our classes later on. It feels nice to relax.
+|
+*/
 
-      <div class="starter-template">
-        <h1>Bootstrap starter template</h1>
-        <p class="lead">Use this document as a way to quickly start any new project.<br> All you get is this text and a mostly barebones HTML document.</p>
-      </div>
+require __DIR__.'/../bootstrap/autoload.php';
 
-    </div><!-- /.container -->
+/*
+|--------------------------------------------------------------------------
+| Turn On The Lights
+|--------------------------------------------------------------------------
+|
+| We need to illuminate PHP development, so let us turn on the lights.
+| This bootstraps the framework and gets it ready for use, then it
+| will load up this application so that we can run it and send
+| the responses back to the browser and delight our users.
+|
+*/
 
-  </body>
-</html>
+$app = require_once __DIR__.'/../bootstrap/app.php';
+
+/*
+|--------------------------------------------------------------------------
+| Run The Application
+|--------------------------------------------------------------------------
+|
+| Once we have the application, we can handle the incoming request
+| through the kernel, and send the associated response back to
+| the client's browser allowing them to enjoy the creative
+| and wonderful application we have prepared for them.
+|
+*/
+
+$kernel = $app->make(Illuminate\Contracts\Http\Kernel::class);
+
+$response = $kernel->handle(
+    $request = Illuminate\Http\Request::capture()
+);
+
+$response->send();
+
+$kernel->terminate($request, $response);

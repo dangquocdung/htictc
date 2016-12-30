@@ -16,9 +16,7 @@ use App\DichVu;
 */
 
 Route::get('/', function () {
-    return view('index');
-    // $dichvu = DichVu::all();
-    // return view('index',['dichvu'=>$dichvu]);
-
-
+    // return view('index');
+    $dichvu = DichVu::all();
+    return view('trangchu',['dichvu'=>$dichvu]);
 });
