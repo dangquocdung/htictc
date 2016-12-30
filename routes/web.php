@@ -1,5 +1,9 @@
 <?php
 
+use App\DichVu;
+
+
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -12,6 +16,9 @@
 */
 
 Route::get('/', function () {
-    // return view('welcome');
-    return view('trangchu');
+    return view('index');
+    // $dichvu = DichVu::all();
+    // return view('index',['dichvu'=>$dichvu]);
+
+
 });
