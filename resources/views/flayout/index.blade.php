@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     @yield('title')
     <base href="{{asset('')}}">
-    <link rel="icon" href="favicon.ico">
+    <link rel="shortcut icon" href="favicon.ico" type="image/vnd.microsoft.icon" />
+    <link rel="stylesheet" href="css/jquery.eeyellow.Timeline.css">
     <link rel="stylesheet" href="css/owl.carousel.css">
     <link rel="stylesheet" href="css/owl.theme.css">
     <link rel="stylesheet" href="css/owl.transitions.css">
