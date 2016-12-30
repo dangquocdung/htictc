@@ -6,8 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     @yield('title')
     <base href="{{asset('')}}">
-    <link rel="shortcut icon" href="favicon.ico" type="image/vnd.microsoft.icon" />
-    <link rel="stylesheet" href="css/jquery.eeyellow.Timeline.css">
+    <link rel="icon" href="favicon.ico">
     <link rel="stylesheet" href="css/owl.carousel.css">
     <link rel="stylesheet" href="css/owl.theme.css">
     <link rel="stylesheet" href="css/owl.transitions.css">
@@ -29,7 +28,7 @@
         </div>
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
-            <li><a href="/">Trang chủ</a></li>
+            <li class="active"><a href="/">Trang chủ</a></li>
             <li><a href="/gioi-thieu">Giới thiệu</a></li>
             <li><a href="/nang-luc">Năng lực</a></li>
             <li><a href="/dich-vu">Dịch vụ</a></li>
